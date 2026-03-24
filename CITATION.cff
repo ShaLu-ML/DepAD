@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "DepAD: Dependency-based Anomaly Detection"
+abstract: >
+  R implementation of the DepAD framework for dependency-based anomaly detection,
+  accompanying the paper "Dependency-based anomaly detection: A general framework
+  and comprehensive evaluation" published in Expert Systems with Applications, 2026.
+authors:
+  - family-names: Lu
+    given-names: Sha
+    affiliation: University of South Australia
+    email: Sha.Lu@unisa.edu.au
+  - family-names: Liu
+    given-names: Lin
+    affiliation: University of South Australia
+  - family-names: Yu
+    given-names: Kui
+    affiliation: Hefei University of Technology
+  - family-names: Le
+    given-names: Thuc Duy
+    affiliation: University of South Australia
+  - family-names: Liu
+    given-names: Jixue
+    affiliation: University of South Australia
+  - family-names: Li
+    given-names: Jiuyong
+    affiliation: University of South Australia
+license: MIT
+year: 2026
+preferred-citation:
+  type: article
+  title: "Dependency-based anomaly detection: A general framework and comprehensive evaluation"
+  authors:
+    - family-names: Lu
+      given-names: Sha
+    - family-names: Liu
+      given-names: Lin
+    - family-names: Yu
+      given-names: Kui
+    - family-names: Le
+      given-names: Thuc Duy
+    - family-names: Liu
+      given-names: Jixue
+    - family-names: Li
+      given-names: Jiuyong
+  journal: "Expert Systems with Applications"
+  volume: 297
+  pages: "129249"
+  issn: "0957-4174"
+  year: 2026
+  doi: "10.1016/j.eswa.2025.129249"
+  url: "https://www.sciencedirect.com/science/article/pii/S0957417425028659"
