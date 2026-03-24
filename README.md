@@ -15,7 +15,7 @@ DepAD is a modular framework for unsupervised anomaly detection based on **depen
 
 The framework consists of three interchangeable components:
 
-1. **Relevant variable selection** — identifies which variables are predictive of each target variable (MI, IEPC, DC, Markov Blanket, PC-skeleton)
+1. **Relevant variable selection** — identifies which variables are predictive of each target variable (MI, IEPC, DC, MB via `fast.iamb`, PC via `si.hiton.pc`)
 2. **Prediction model** — trains a regression model for each target using its relevant variables (BCART, LASSO, Ridge, Linear, etc.)
 3. **Score combination** — aggregates per-variable deviations into a single anomaly score (Sum, Max, GS, Thresh/PS, AZM-PS)
 
@@ -117,7 +117,11 @@ depad.type <- list(
   type.pred = c("bcart", "lasso", "linear", "ridge"),          # prediction models
   type.com  = c("Sum", "GS", "azm_ps", "Max", "Thresh")        # combination methods
 )
+```
 
+**Note on MB and PC implementations:** The paper used the [CausalFS](https://github.com/kuiy/CausalFS) C library (FBED and HITON-PC algorithms) for MB and PC learning. This R implementation uses `bnlearn`'s `fast.iamb` (for `mb`) and `si.hiton.pc` (for `pc`), which are equivalent in principle but may produce slightly different results from those reported in the paper.
+
+```r
 ## Comparison baselines
 alg.comp <- c("lof", "wknn", "iforest", "abod", "sod",
               "combn", "also_m5p",

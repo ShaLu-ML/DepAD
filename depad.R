@@ -15,18 +15,9 @@ require(FSinR)
 ###                rel.var = a vector of name of variable, relevant variables of the target)
 GetRelVar <- function( sample.info, train, rel.type ){
 
-  ## added for tango version
-  return(None)
-  
-  
   rel.type <- str_split(rel.type, "_", simplify = T)
   rel.name <- rel.type[1]
   if(length(rel.type) > 1) rel.para <- rel.type[2:length(rel.type)]
-  
-  if( rel.name %in% c("mb", "pc") ){
-    cat("\n ERROR: Shouldn't go to GetRelVar !! \n")
-    return(NULL)
-  }
   
   # integer could not be accepted by bnlearn
   # TBD: why does the type of data is changed to integer from double after sampling??
