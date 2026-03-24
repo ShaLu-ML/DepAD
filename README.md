@@ -146,10 +146,6 @@ Set `exe.from` to control which step is (re-)run:
 
 ---
 
-## Results
-
-The `results/evaluations_paper.csv` file contains the complete evaluation results (ROC-AUC, PR-AUC, R-Precision, AP) for all algorithm variants and datasets as reported in the paper.
-
 ---
 
 ## Citation
