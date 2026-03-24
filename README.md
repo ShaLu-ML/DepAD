@@ -176,5 +176,5 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 ## Contact
 
-For questions about the code or data, please contact **Sha Lu** at Sha.Lu@unisa.edu.au
+For questions about the code or data, please contact **Sha Lu** at Sha.Lu@adelaide.edu.au
 or open an issue on this repository.

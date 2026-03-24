@@ -6,7 +6,7 @@
 ## Journal: Expert Systems with Applications, Vol. 297, 2026, 129249
 ## DOI: 10.1016/j.eswa.2025.129249
 ## Authors: Sha Lu, Lin Liu, Kui Yu, Thuc Duy Le, Jixue Liu, Jiuyong Li
-## Contact: Sha.Lu@unisa.edu.au
+## Contact: Sha.Lu@adelaide.edu.au
 ## ============================================================
 
 rm(list = ls())
