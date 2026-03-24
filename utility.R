@@ -1,5 +1,4 @@
 require(ggplot2)
-require(ggplot)
 require(ggpubr)
 require(foreach)
 require(stringr)

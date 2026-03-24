@@ -4,7 +4,7 @@ source("real_data.R")
 
 DownSampleAnomaly <- function(sample.info, data.org){
   
-  set.seed( dget("seed_list.txt")[sample.info$index] )
+  set.seed( dget("data/seed_list.txt")[sample.info$index] )
   
   n.ano <- sum(data.org$class %in% sample.info$class.ano)
   n.nor <- sum(data.org$class %in% sample.info$class.nor)
@@ -13,7 +13,7 @@ DownSampleAnomaly <- function(sample.info, data.org){
   if ( if.sample == T) {
     sample.from <- which(data.org$class %in% sample.info$class.ano) 
     
-    ratio.nao <- sample.info$ratio
+    ratio.ano <- sample.info$ratio
     # n.down is the ratio.ano of the (n.down + n.nor)
     n.down <- floor( n.nor * ratio.ano / (1 - ratio.ano) )
     

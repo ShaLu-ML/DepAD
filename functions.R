@@ -142,7 +142,7 @@ LearnBn <- function(train, sample.info){
   if(para){
     cl = makeCluster( detectCores()-1 )
     ## set seed
-    clusterSetRNGStream(cl, dget("seed_list.txt")[sample.info$index])
+    clusterSetRNGStream(cl, dget("data/seed_list.txt")[sample.info$index])
     #bn.str <- bnlearn::hc(train, cluster = cl)  #hill climb
     bn.str <- bnlearn::pc.stable(train, cluster = cl)
     bn.str$arcs <- directed.arcs(bn.str) # get rid of undirected arcs
@@ -423,7 +423,7 @@ SaveAlgInfo <- function( x, folder=NULL, sample.info=NULL, alg=NULL, full.name=N
     
     print(folder)
     print(x)
-    x <- data.frame( computer = GetComputerName(), 
+    x <- data.frame( computer = Sys.info()["nodename"],
                      runtime = x)
     
     if( file.exists(log.name) ){

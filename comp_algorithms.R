@@ -184,7 +184,7 @@ AlgMbom <- function(dat, sample.info, k.nn){
     ## load the saved time for learning MB
     rt.mb <- LoadAlgInfo("time_rel", sample.info, alg = "mbom" )
     if( is.null(rt.mb) ) get.mb <- T else {
-      idx <- which(rt.mb$computer == GetComputerName())
+      idx <- which(rt.mb$computer == Sys.info()["nodename"])
       if( length(idx) > 0 ) rt.mb <- rt.mb[idx[1], "runtime"] else get.mb <- T
     }
   } 

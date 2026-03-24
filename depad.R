@@ -373,7 +373,7 @@ FitDepadPredModel <- function( sample.info, train, rel.set, pred.type){
         
         predict(fit, train)
       }
-      set.seed( dget("seed_list.txt")[sample.info$index] )
+      set.seed( dget("data/seed_list.txt")[sample.info$index] )
       expect <- apply(bag.y, 2, mean,  na.rm=T)
     }
     
@@ -705,9 +705,11 @@ GenDepadScore <- function(dev, sample.info, alg){
   if( norm == "zscore 90") dev <- apply(dev, 2, Zscore90)
   if( norm == "zscore median") dev <- apply(dev, 2, ZscoreMedian)
   if( norm == "rsd") dev <- apply(dev, 2, ReverseStandardDeviation)
-  if( norm == "adp_sd") dev <- apply(dev, 2, AdpSd)
-  if( norm == "adp_rsd") dev <- apply(dev, 2, AdpRsd)
-  if( norm == "adp_azm") dev <- apply(dev, 2, AdpAzm)
+  ## NOTE: AdpSd, AdpRsd, AdpAzm are experimental normalisations not used in the paper
+  ## and are not currently implemented. Do not use these combination names.
+  # if( norm == "adp_sd") dev <- apply(dev, 2, AdpSd)
+  # if( norm == "adp_rsd") dev <- apply(dev, 2, AdpRsd)
+  # if( norm == "adp_azm") dev <- apply(dev, 2, AdpAzm)
   
     
   ## aggregation
